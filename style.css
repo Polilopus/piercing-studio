@@ -660,3 +660,28 @@ footer h4::after {
         text-align: center;
     }
 }
+
+/* Защита от слишком больших фото */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.jewelry-image img {
+    max-width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.story-photo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
