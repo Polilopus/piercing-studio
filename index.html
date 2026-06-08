@@ -16,129 +16,202 @@
         <div class="logo">1359 piercing</div>
         <nav>
             <ul class="menu">
-                <li><a href="#about">О студии</a></li>
-                <li><a href="#masters">Мастера</a></li>
+                <li><a href="#about">О мастере</a></li>
+                <li><a href="#portfolio">Работы</a></li>
                 <li><a href="#jewelry">Украшения</a></li>
-                <li><a href="#prices">Цены</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
-        <a href="#form" class="btn-small">Записаться</a>
+        <a href="https://n2174247.yclients.com/" class="btn-small">Записаться</a>
     </div>
 </header>
 
-<!-- ГЛАВНЫЙ ЭКРАН (HERO) -->
-<section class="hero">
-    <div class="container hero-content">
-        <h1>Индивидуальность <br> в деталях</h1>
-        <p>Мы делаем качественный и безболезненный прокол</p>
-        <a href="#form" class="btn-primary">Записаться</a>
-    </div>
-</section>
-
-<!-- О СТУДИИ (цифры) -->
-<section id="about" class="stats">
+<!-- ЛИЧНАЯ ИСТОРИЯ МАСТЕРА (объединяет hero + статистику) -->
+<section id="about" class="master-story">
     <div class="container">
-        <h2>О студии</h2>
-        <div class="stats-grid">
-            <div class="stat-item"><span class="stat-number">7</span> <span class="stat-text">лет<br>радуем клиентов</span></div>
-            <div class="stat-item"><span class="stat-number">2</span> <span class="stat-text">этапа<br>обработки</span></div>
-            <div class="stat-item"><span class="stat-number">1</span> <span class="stat-text">студия<br>в центре</span></div>
-            <div class="stat-item"><span class="stat-number">9</span> <span class="stat-text">лет<br>опыт мастеров</span></div>
+        <div class="story-grid">
+            <!-- Левая колонка: фото мастера -->
+            <div class="story-photo">
+                <img src="images/master.jpg" alt="Лилия — мастер пирсинга">
+            </div>
+            
+            <!-- Правая колонка: текст + цифры -->
+            <div class="story-content">
+                <h1>Меня зовут Лилия,<br>и я — мастер по пирсингу</h1>
+                
+                <div class="story-intro">
+                    <p>Но пришла я к этому не через учебники, а через <strong>бунт</strong>. Пирсинг стал моим способом говорить без слов.</p>
+                    <p>Прошло время, и бунтарство переросло в философию. Теперь это не просто прокол, а желание внести в мир красоту и оставить свой след. В каждом проколе я вижу, как человек становится чуточку смелее и уникальнее.</p>
+                     <p>Я всегда сопровождаю клиентов в течение всего периода заживления. Через неделю после процедуры спрашиваю об их самочувствии, а через месяц они приходят ко мне на плановый осмотр. Также я даю свой личный номер телефона, чтобы клиенты могли звонить или писать в любой момент — без ожидания ответа в мессенджерах.</p>
+                </div>
+
+                <!-- Цифры/факты -->
+                <div class="story-stats">
+                    <div class="stat-fact">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label">год в профессии</span>
+                    </div>
+                    <div class="stat-fact">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">довольных клиентов</span>
+                    </div>
+                </div>
+
+                <div class="story-philosophy">
+                    <p>В моем кабинете нет конвейера. Только максимально комфортная атмосфера и трепетное отношение к каждому. Твоя анатомия — не шаблон, поэтому я всегда подбираю идеальное расположение, чтобы это было не только красиво, но и безопасно.</p>
+                    <p class="dream-quote">Я мечтаю сделать мир красивее через свои проколы. Давай познакомимся поближе и создадим что-то уникальное именно для тебя? ✨</p>
+                </div>
+
+                <a href="https://n2174247.yclients.com/" class="btn-primary">Записаться к Лилии</a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- НАШИ МАСТЕРА + ОТЗЫВ -->
-<section id="masters" class="masters">
+<!-- ПРИМЕРЫ РАБОТ (ПОРТФОЛИО) -->
+<section id="portfolio" class="portfolio">
     <div class="container">
-        <h2>Наши мастера</h2>
-        <div class="review-card">
-            <p class="review-text">«Огромная благодарность мастеру Елене, она сумела расположить и успокоить меня. Я очень переживала, но с первых минут убедилась, что я в надежных руках! Всё прошло практически безболезненно, быстро зажило. Однозначно рекомендую!»</p>
-            <p class="review-author">Виктория <span>20.04.2020</span></p>
+        <div class="portfolio-header">
+            <h2>📸 Примеры моих работ</h2>
+            <p class="portfolio-subtitle">Каждый прокол — это маленькое искусство. Смотрите, вдохновляйтесь и выбирайте своё украшение.</p>
+            <p class="portfolio-note">✨ Аккуратно, стерильно, с душой.</p>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Сюда будут подставлены 11 фотографий через JavaScript -->
         </div>
     </div>
 </section>
 
-<!-- КАК ПРОХОДИТ ПРОЦЕДУРА -->
-<section class="procedure">
+<!-- УКРАШЕНИЯ - ВИТРИНА -->
+<section id="jewelry" class="jewelry-showcase">
     <div class="container">
-        <h2>Как проходит процедура</h2>
-        <p class="procedure-desc">Большинство клиентов утверждает, что прокол носа проходит относительно безболезненно. Во время процедуры может ощущаться небольшой дискомфорт.</p>
-        <div class="steps">
-            <div class="step">1. Подготовка инструмента</div>
-            <div class="step">2. Обеззараживание кожи</div>
-            <div class="step">3. Определение места прокола</div>
-            <div class="step">4. Прокол (2 минуты)</div>
-            <div class="step">5. Вставка украшения</div>
-            <div class="step">6. Консультация по уходу</div>
+        <div class="jewelry-header">
+            <h2>✨ Украшения, в которые вы влюбитесь</h2>
+            <p class="jewelry-tagline">Те самые, в которых вы такие красивые после проколов.<br>Титан, на который можно положиться. И цены, от которых внутри порхает.</p>
+        </div>
+
+        <div class="jewelry-grid">
+            <!-- Карточка украшения 1 -->
+            <div class="jewelry-card">
+                <div class="jewelry-image">
+                    <img src="images/jewelry1.jpg" alt="Титановое украшение для пирсинга">
+                </div>
+                <div class="jewelry-specs">
+                    <div class="spec-badge">1.2 MM</div>
+                    <div class="spec-badge titanium">TITANIUM</div>
+                    <div class="spec-badge standard">ASTM F-136</div>
+                </div>
+                <p class="jewelry-desc">Имплантационный титан — безопасно, надёжно, не вызывает аллергии</p>
+            </div>
+
+            <!-- Карточка украшения 2 -->
+            <div class="jewelry-card">
+                <div class="jewelry-image">
+                    <img src="images/jewelry2.jpg" alt="Титановое украшение для пирсинга">
+                </div>
+                <div class="jewelry-specs">
+                    <div class="spec-badge">1.2 MM</div>
+                    <div class="spec-badge titanium">TITANIUM</div>
+                    <div class="spec-badge standard">ASTM F-136</div>
+                </div>
+                <p class="jewelry-desc">Идеальное сочетание внешнего вида и качества от лучших производителей</p>
+            </div>
+
+            <!-- Карточка украшения 3 -->
+            <div class="jewelry-card">
+                <div class="jewelry-image">
+                    <img src="images/jewelry3.jpg" alt="Титановое украшение для пирсинга">
+                </div>
+                <div class="jewelry-specs">
+                    <div class="spec-badge">1.2 MM</div>
+                    <div class="spec-badge titanium">TITANIUM</div>
+                    <div class="spec-badge standard">ASTM F-136</div>
+                </div>
+                <p class="jewelry-desc">Украшения, которые подчеркнут вашу индивидуальность</p>
+            </div>
+        </div>
+
+        <!-- Партнёрская рекомендация (без акцента на салоны) -->
+        <div class="partner-block">
+            <p>💎 Понравились украшения? Такие же и многие другие модели</p>
+            <a href="https://piercing-optom.ru/?ysclid=mp2fx79ghh282216793" target="_blank" rel="noopener noreferrer" class="partner-link">
+                🔥 можно заказать оптом на сайте «Пирсинг-оптом.ру»
+            </a>
         </div>
     </div>
 </section>
 
-<!-- УКРАШЕНИЯ -->
-<section id="jewelry" class="jewelry">
+<!-- ОТЗЫВЫ КЛИЕНТОВ (карусель) -->
+<section id="reviews" class="reviews-section">
     <div class="container">
-        <h2>Украшения</h2>
-        <p>Правильно выбранное украшение поможет подчеркнуть вашу индивидуальность. В нашей студии вы сможете выбрать то, что подходит именно вам! У нас вы найдете идеальное сочетание внешнего вида и качества изделия от лучших производителей.</p>
-        <div class="jewelry-demo">
-            <img src="images/ring.jpg" alt="Кольцо для носа с камнями">
-            <p>Кольцо для носа с россыпью камней</p>
+        <h2>❤️ Что говорят мои клиенты</h2>
+        <p class="reviews-subtitle">Реальные отзывы — без прикрас</p>
+        
+        <div class="reviews-carousel">
+            <button class="carousel-btn prev-btn" aria-label="Предыдущий отзыв">❮</button>
+            
+            <div class="reviews-container">
+                <div class="reviews-wrapper" id="reviewsWrapper">
+                    <!-- Отзывы будут подставлены сюда через JavaScript -->
+                </div>
+            </div>
+            
+            <button class="carousel-btn next-btn" aria-label="Следующий отзыв">❯</button>
         </div>
-    </div>
-</section>
-
-<!-- СТОИМОСТЬ -->
-<section id="prices" class="prices">
-    <div class="container">
-        <h2>Стоимость</h2>
-        <div class="price-cards">
-            <div class="price-card"><h3>Экстрим</h3><p class="price">4999 ₽</p></div>
-            <div class="price-card"><h3>Классический</h3><p class="price">2999 ₽</p></div>
-            <div class="price-card"><h3>Интим</h3><p class="price">3999 ₽</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- ФОРМА ЗАПИСИ -->
-<section id="form" class="callback">
-    <div class="container">
-        <h2>Запишись сейчас и получи <span>-30%</span> на первый прокол</h2>
-        <form id="signupForm">
-            <input type="text" placeholder="Как вас зовут" required>
-            <input type="tel" placeholder="Номер телефона" required>
-            <button type="submit" class="btn-primary">Записаться</button>
-            <label class="agree">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</label>
-        </form>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
     </div>
 </section>
 
 <!-- ПОДВАЛ -->
 <footer id="contacts">
-    <div class="container footer-grid">
-        <div class="footer-contacts">
-            <p>Санкт-Петербург, ул. Советская 4</p>
-            <p>8 (999) 957-800-20-14</p>
-            <p>zonspiter@gmail.com</p>
-            <div class="socials">
-                <a href="#">FB</a> | <a href="#">TW</a> | <a href="#">IG</a>
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Блок 1: Социальные сети (слева) -->
+            <div class="footer-socials">
+                <h4>Следите за мной</h4>
+                <div class="social-icons">
+                    <a href="https://vk.ru/piercing1359" target="_blank" rel="noopener noreferrer" class="social-link vk">
+                        <img src="images/vk-icon.svg" alt="ВКонтакте" class="social-img">
+                        <span>ВКонтакте</span>
+                    </a>
+                    <a href="https://t.me/piersing1359" target="_blank" rel="noopener noreferrer" class="social-link tg">
+                        <img src="images/tg-icon.svg" alt="Telegram" class="social-img">
+                        <span>Telegram</span>
+                    </a>
+                    <a href="https://www.instagram.com/piercing1359.sochi" target="_blank" rel="noopener noreferrer" class="social-link ig">
+                        <img src="images/ig-icon.svg" alt="Instagram" class="social-img">
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Блок 2: Меню (по центру) -->
+            <div class="footer-menu">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#about">О мастере</a></li>
+                    <li><a href="#portfolio">Работы</a></li>
+                    <li><a href="#jewelry">Украшения</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <!-- Блок 3: Контакты (справа) -->
+            <div class="footer-contacts">
+                <h4>Контакты</h4>
+                <p>📍 Сочи, ул. Роз 115а</p>
+                <p>📞 <a href="tel:89952218004643">8 (995) 221-800-46-43</a></p>
+                <p class="work-hours">🕐 Ежедневно с 10:00 до 19:00</p>
             </div>
         </div>
-        <div class="footer-menu">
-            <a href="#about">О студии</a>
-            <a href="#masters">Мастера</a>
-            <a href="#jewelry">Украшения</a>
-            <a href="#prices">Цены</a>
-            <a href="#contacts">Контакты</a>
+        
+        <div class="copyright">
+            <p>© 2026 Все права защищены</p>
         </div>
-        <div class="footer-partners">
-            <p>ЖК «ЗОЛОТЫЕ КУПОЛА»</p>
-            <p>БИТАВТО</p>
-            <p>Vegetable Base</p>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>© 2026. Все права защищены</p>
     </div>
 </footer>
 
