@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== ШАПКА ===== */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    background: #0b0b0b;
+    z-index: 100;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.menu a:hover { color: #ff3b6f; }
+.btn-small {
+    background: #ff3b6f;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-small:hover { background: #e62e5c; }
+
+/* ===== КНОПКИ ===== */
+.btn-primary {
+    background: #ff3b6f;
+    padding: 14px 35px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover { background: #e62e5c; }
+
+/* ===== ИСТОРИЯ МАСТЕРА (master-story) ===== */
+.master-story {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0b0b0b 0%, #141414 100%);
+}
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+.story-photo img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+}
+.story-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+.story-intro {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+    border-left: 3px solid #ff3b6f;
+    padding-left: 20px;
+}
+.story-intro p {
+    margin-bottom: 15px;
+}
+.story-stats {
+    display: flex;
+    gap: 30px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+.stat-fact {
+    background: #1a1a1a;
+    padding: 15px 25px;
+    border-radius: 60px;
+    text-align: center;
+}
+.stat-fact .stat-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ff3b6f;
+    display: block;
+}
+.stat-fact .stat-label {
+    font-size: 14px;
+    color: #aaa;
+}
+.story-philosophy {
+    margin: 30px 0;
+    color: #ccc;
+    line-height: 1.6;
+}
+.dream-quote {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* ===== ПОРТФОЛИО ===== */
+.portfolio {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.portfolio h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.portfolio-subtitle {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+.portfolio-note {
+    font-size: 16px;
+    color: #ff3b6f;
+    font-weight: 500;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #1a1a1a;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+.portfolio-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 20px 15px 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    text-align: center;
+}
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+.portfolio-overlay p {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ===== УКРАШЕНИЯ (jewelry-showcase) ===== */
+.jewelry-showcase {
+    padding: 80px 0;
+    background: linear-gradient(145deg, #0f0f0f, #080808);
+}
+.jewelry-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.jewelry-showcase h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.jewelry-tagline {
+    font-size: 20px;
+    color: #ddd;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.jewelry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.jewelry-card {
+    background: #1a1a1a;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.jewelry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+}
+.jewelry-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #111;
+}
+.jewelry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.jewelry-card:hover .jewelry-image img {
+    transform: scale(1.05);
+}
+.jewelry-specs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 15px 15px;
+    flex-wrap: wrap;
+}
+.spec-badge {
+    background: #2a2a2a;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #ccc;
+}
+.spec-badge.titanium {
+    background: #2a2a4a;
+    color: #88aaff;
+    border: 1px solid #3a3a6a;
+}
+.spec-badge.standard {
+    background: #2a3a2a;
+    color: #88ffaa;
+}
+.jewelry-desc {
+    font-size: 15px;
+    color: #bbb;
+    padding: 0 15px 10px;
+    line-height: 1.4;
+}
+.partner-block {
+    text-align: center;
+    background: #111;
+    border-radius: 40px;
+    padding: 35px 25px;
+    margin-top: 20px;
+    border: 1px solid #2a2a2a;
+}
+.partner-block p {
+    color: #ddd;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.partner-link {
+    display: inline-block;
+    background: #ff3b6f;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+.partner-link:hover {
+    background: #e62e5c;
+    transform: scale(1.02);
+}
+
+/* ===== ОТЗЫВЫ (reviews-section + карусель) ===== */
+.reviews-section {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+.reviews-section h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.reviews-subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+.reviews-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.carousel-btn {
+    background: #ff3b6f;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.carousel-btn:hover {
+    background: #e62e5c;
+    transform: scale(1.05);
+}
+.reviews-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+}
+.reviews-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+.review-card-carousel {
+    flex: 0 0 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.review-content {
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-left: 5px solid #ff3b6f;
+}
+.review-rating {
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #ffb800;
+    margin-bottom: 20px;
+}
+.review-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+.review-author {
+    font-weight: 700;
+    color: #ff3b6f;
+    margin-top: 15px;
+}
+.review-date {
+    font-size: 13px;
+    color: #777;
+    display: block;
+    margin-top: 8px;
+}
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #444;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dot.active {
+    background: #ff3b6f;
+    width: 30px;
+    border-radius: 20px;
+}
+
+/* ===== ПОДВАЛ (footer) ===== */
+footer {
+    background: #0a0a0a;
+    padding: 60px 0 30px;
+    border-top: 1px solid #222;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+}
+footer h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #ff3b6f;
+}
+.footer-socials {
+    text-align: left;
+}
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 50px;
+    background: #111;
+    width: fit-content;
+}
+.social-link:hover {
+    transform: translateX(5px);
+    background: #1a1a1a;
+}
+.social-link.vk:hover { color: #4c75a3; }
+.social-link.tg:hover { color: #26A5E4; }
+.social-link.ig:hover { color: #d62976; }
+.social-img {
+    width: 28px;
+    height: 28px;
+    transition: 0.3s;
+}
+.social-link span {
+    font-size: 16px;
+    font-weight: 500;
+}
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-menu li {
+    margin-bottom: 12px;
+}
+.footer-menu a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    display: inline-block;
+}
+.footer-menu a:hover {
+    color: #ff3b6f;
+    transform: translateX(5px);
+}
+.footer-contacts p {
+    margin-bottom: 12px;
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.footer-contacts a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-contacts a:hover {
+    color: #ff3b6f;
+}
+.work-hours {
+    color: #888;
+    font-size: 14px;
+    margin-top: 15px;
+}
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #222;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .header-flex {
+        justify-content: space-between;
+    }
+    
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .story-photo img {
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+    .story-content h1 {
+        font-size: 32px;
+    }
+    .story-intro {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid #ff3b6f;
+        padding-top: 20px;
+    }
+    .story-stats {
+        justify-content: center;
+    }
+    
+    .portfolio h2 {
+        font-size: 32px;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    .portfolio-item img {
+        height: 200px;
+    }
+    .portfolio-overlay p {
+        font-size: 12px;
+    }
+    
+    .jewelry-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .jewelry-showcase h2 {
+        font-size: 32px;
+    }
+    .jewelry-tagline {
+        font-size: 16px;
+    }
+    .partner-link {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+    
+    .reviews-section h2 {
+        font-size: 32px;
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .review-content {
+        padding: 25px;
+    }
+    .review-text {
+        font-size: 16px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .footer-socials {
+        text-align: center;
+    }
+    .social-icons {
+        align-items: center;
+    }
+    .social-link {
+        width: 200px;
+        justify-content: center;
+    }
+    .footer-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer-menu li {
+        margin-bottom: 0;
+    }
+    .footer-menu a:hover {
+        transform: translateX(0);
+    }
+    footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+    .footer-contacts {
+        text-align: center;
+    }
+}
